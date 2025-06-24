@@ -8,7 +8,7 @@ export function Scrumble() {
     const targets = ["Web Developer", "IT Enthusiast", "Information System Student", "Fulltime Learner"]
 
     useEffect(() => {
-        const id = setInterval(() => setIndex(index => index === targets.length-1 ? 0 : index+1), 5000)
+        const id = setInterval(() => setIndex(index => index === targets.length-1 ? 0 : index+1), 6000)
         return () => clearInterval(id)
     }, [])
 
