@@ -11,3 +11,19 @@ export function Stars({translate_x, translate_y} : {translate_x?: number, transl
         </>
     )
 }
+
+export function StarsBg() {
+    const coordinates: number[][] = []
+    for (let i = 0; i<150; i++)
+    {
+        coordinates.push([Math.round(Math.random()*100), Math.round(Math.random()*100)-1])
+    }
+
+    return (
+        <div className='absolute w-full h-full overflow-hidden left-0 -z-10'>
+            {coordinates.map(([coordinate_x, coordinate_y]) => (
+            <Stars translate_x={coordinate_x} translate_y={coordinate_y} />
+            ))}
+        </div>
+    )
+}
