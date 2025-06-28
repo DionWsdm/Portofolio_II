@@ -1,5 +1,6 @@
 import { StarsBg } from "../components/stars";
 import Porto from "../assets/porto-ii.png";
+import Github from "../assets/github.png";
 
 interface project {
     image: string,
@@ -27,18 +28,24 @@ export function Projects() {
     ]
     
     return (
-        <div className="flex flex-col w-7xl mx-10">
+        <div className="flex flex-col w-full items-center mb-20">
             <StarsBg />
             <p className="text-3xl lg:text-5xl font-bold mb-5">My Projects</p>
-            <div className="grid grid-cols-2 lg:grid-cols-3 w-full gap-5 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-3 w-[80%] gap-5 items-center">
                 {projects.map((project) => (
-                    <div className="flex flex-col items-center w-45 bg-neutral-400/10 py-3 rounded-[10px] hover:text-black hover:bg-white">
-                        <div className="flex flex-col w-37 text-[14px] items-center">
+                    <a href="https://dion-wsdm.vercel.app/" className="flex flex-col items-center w-full py-4 bg-neutral-400/10 rounded-[10px] hover:text-black hover:bg-white">
+                        <div className="flex flex-col w-[90%] text-[14px] items-center gap-3">
                             <img src={project.image} alt="portofolio" />
-                            <p className="mb-2">{project.title}</p>
+                            <p className="text-[18px] font-bold">{project.title}</p>
                             <p>{project.description}</p>
+                            <div className="flex w-full flex-row-reverse">
+                                <a href="https://github.com/DionWsdm/Portofolio_II" className="flex flex-row bg-blue-500/50 w-25 h-9 rounded-[5px] items-center justify-center gap-2">
+                                    <img src={Github} alt="github" className="size-5"/>
+                                    <p>GitHub</p>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 ))}
             </div>
         </div>
