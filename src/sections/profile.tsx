@@ -35,7 +35,7 @@ export function Profile() {
         className="absolute -z-10 left-0 w-full h-full blur-[1000px] -translate-x-50 object-cover overflow-y-hidden"
       />
       <StarsBg />
-      <Navigation isFlipped={isFlipped} setIsFlipped={setIsFlipped}/>
+      <Navigation setIsFlipped={setIsFlipped}/>
       <div className="flex flex-col gap-5 lg:flex-row w-full h-full items-center -translate-y-8 lg:-translate-y-0">
         <div className="flex flex-col gap-3 lg:flex-row items-center lg:gap-0">
           <img
