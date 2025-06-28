@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className='flex flex-col gap-20 w-full mx-auto font-roboto overflow-hidden'>
+    <div className='flex flex-col gap-10 lg:gap-22 w-full font-roboto overflow-hidden'>
       <Profile />
       <Projects />
     </div>

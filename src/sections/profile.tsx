@@ -28,7 +28,7 @@ export function Profile() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[90vh] w-full px-10 lg:px-20 items-center overflow-hidden">
+    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[95vh] lg:h-[90vh] w-full px-10 lg:px-20 items-center overflow-hidden">
       <img
         src={elips}
         alt=""
@@ -108,10 +108,9 @@ export function Profile() {
                 <div className="flex flex-col w-[90%] gap-3 lg:w-3xl lg:gap-5">
                   <p className="text-2xl lg:text-5xl">About Me</p>
                   <article className="text-[14px] lg:text-[20px]">
-                    My Full name is Dion Wisdom Pasaribu. I'm an undergraduate
-                    Information System student at Universitas Indonesia. I am a
+                    I'm an undergraduate Information System student at Universitas Indonesia. I am a
                     dedicated student with a profound interest in technology,
-                    programming, mathematics, and business. Therefore, i have a
+                    programming, mathematics, and business. I have a
                     desire to deeply learn Web Development, Artifical
                     Intelligence, and Data Science. I am committed to excellence
                     in all tasks I undertake and consistently seek opportunities
