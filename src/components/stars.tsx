@@ -12,11 +12,11 @@ export function Stars({translate_x, translate_y} : {translate_x?: number, transl
     )
 }
 
-export function StarsBg({height} : {height?:number}) {
+export function StarsBg({height, jumlah} : {height?:number, jumlah?:number}) {
     const coordinates: number[][] = []
-    for (let i = 0; i<150; i++)
+    for (let i = 0; i<(jumlah ? jumlah : 150); i++)
     {
-        coordinates.push([Math.round(Math.random()*100), Math.round(Math.random()*100)-1])
+        coordinates.push([Math.round(Math.random()*100), Math.round((Math.random()*1.5)*100)])
     }
 
     return (
