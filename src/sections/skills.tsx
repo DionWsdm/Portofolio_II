@@ -79,7 +79,7 @@ export function Skills() {
     ]
 
     return (
-        <div className="flex flex-col w-full items-center font-bold gap-15">
+        <div className="flex flex-col w-7xl items-center font-bold gap-15 mb-20">
             <p className="text-3xl lg:text-5xl">Skills</p>
             <div className="grid grid-cols-4 gap-7 lg:grid-cols-10 lg:gap-11">
                 {logos.map((logo) => (

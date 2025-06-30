@@ -28,7 +28,7 @@ export function Profile() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[95vh] lg:h-[90vh] w-full px-10 lg:px-20 items-center overflow-hidden">
+    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[95vh] lg:h-[90vh] w-full px-10 lg:px-20 items-center overflow-hidden mb-22">
       <img
         src={elips}
         alt=""
