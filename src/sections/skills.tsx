@@ -12,6 +12,7 @@ import prisma from "../assets/prisma.webp";
 import mysql from "../assets/mysql.png";
 import pandas from "../assets/pandas.png";
 import numpy from "../assets/numpy.png";
+import { StarsBg } from "../components/stars";
 
 interface logo {
     src: string,
@@ -22,69 +23,70 @@ export function Skills() {
     const logos: logo[] = [
         {
             src: java,
-            size: "lg:size-15",
+            size: "size-12 lg:size-15",
         }, 
         {
             src: typeScript,
-            size: "lg:size-10",
+            size: "size-8 lg:size-10",
         }, 
         {
             src: javaScript,
-            size: "lg:size-10",
+            size: "size-8 lg:size-10",
         }, 
         {
             src: python,
-            size: "lg:size-11",
+            size: "size-10 lg:size-11",
         },
         {
             src: html, 
-            size: "lg:size-13",
+            size: "size-10 lg:size-13",
         },
         {
             src: css,
-            size: "lg:size-12 object-cover"
+            size: "size-10 lg:size-12 object-cover"
         },
         {
             src: tailwind,
-            size: "lg:size-10"
+            size: "size-8 lg:size-10"
         },
         {
             src: react,
-            size: "lg:size-12",
+            size: "size-10 lg:size-12",
         },
         {
             src: express,
-            size: "lg:size-12 invert",
+            size: "size-10 lg:size-12 invert",
         },
         {
             src: postgre,
-            size: "lg:size-11",
+            size: "size-9 lg:size-11",
         },
         {
             src: mysql,
-            size: "lg:size-15"
+            size: "size-13 lg:size-15"
         },
         {
             src: prisma,
-            size: "lg:size-12 invert"
+            size: "size-9 lg:size-12 invert"
         },
         {
             src: pandas,
-            size: "lg:size-13"
+            size: "size-12 lg:size-13"
         },
         {
             src: numpy,
-            size: "lg:size-19"
+            size: "size-15 lg:size-19"
         }
     ]
 
     return (
-        <div className="flex flex-col w-7xl items-center font-bold gap-15 mb-20">
+        <div className="flex flex-col w-7xl items-center font-bold gap-15 mb-15 lg:mb-20">
+            <StarsBg height={window.innerWidth < 450 ? 480 : 400}/>
             <p className="text-3xl lg:text-5xl">Skills</p>
             <div className="grid grid-cols-4 gap-7 lg:grid-cols-10 lg:gap-11">
                 {logos.map((logo) => (
                     <div className="flex size-15 lg:size-20 rounded-full bg-blue-400/20 items-center">
-                        <img src={logo.src} alt="logo" className={`size-10 ${logo.size} m-auto`}/>
+                        <img src={logo.src} alt="logo" className={`${logo.size} m-auto`}/>
                     </div>
                 ))}
             </div>

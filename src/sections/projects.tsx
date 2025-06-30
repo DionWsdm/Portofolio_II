@@ -28,8 +28,8 @@ export function Projects() {
     ]
     
     return (
-        <div className="flex flex-col w-7xl h-auto items-center mb-30">
-            <StarsBg height={1100}/>
+        <div className="flex flex-col w-80 lg:w-7xl h-auto items-center mb-15 lg:mb-30">
+            <StarsBg height={window.innerWidth < 450 ? 450 : 600}/>
             <p className="text-3xl lg:text-5xl font-bold mb-5">My Projects</p>
             <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-5 items-center">
                 {projects.map((project) => (
