@@ -29,6 +29,7 @@ export function ShootingStars() {
   useEffect(() => {
     const background = document.getElementById("shooting-stars");
     const deltaY = window.innerWidth < 500 ? 7 : 3;
+    const delay = window.innerWidth < 500 ? 5 : 1;
     if (currStar) {
       let posY = 0;
       let posX = parseInt(
@@ -44,7 +45,7 @@ export function ShootingStars() {
           currStar.style.top = posY + "px";
           currStar.style.left = posX + "px";
         }
-      }, 1);
+      }, delay);
     }
   }, [currStar]);
 
