@@ -28,6 +28,7 @@ export function ShootingStars() {
 
   useEffect(() => {
     const background = document.getElementById("shooting-stars");
+    const deltaY = window.innerWidth < 500 ? 7 : 3;
     if (currStar) {
       let posY = 0;
       let posX = parseInt(
@@ -38,7 +39,7 @@ export function ShootingStars() {
           background?.removeChild(currStar);
           clearInterval(movingStarInterval);
         } else {
-          posY += 3;
+          posY += deltaY;
           posX += 3;
           currStar.style.top = posY + "px";
           currStar.style.left = posX + "px";
