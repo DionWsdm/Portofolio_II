@@ -8,6 +8,7 @@ import Linkedin from "../assets/linkedin.png";
 import elips from "../assets/elips_blur.png";
 import { StarsBg } from "../components/stars";
 import { useState } from "react";
+import { ShootingStars } from "../components/shootingStars";
 
 export function Profile() {
   const medias = [
@@ -34,6 +35,7 @@ export function Profile() {
         alt=""
         className="absolute -z-10 left-0 w-full h-full blur-[1000px] -translate-x-50 object-cover overflow-y-hidden"
       />
+      <ShootingStars/>
       <StarsBg />
       <Navigation setIsFlipped={setIsFlipped}/>
       <div className="flex flex-col gap-5 lg:flex-row w-full h-full items-center -translate-y-8 lg:-translate-y-0">
