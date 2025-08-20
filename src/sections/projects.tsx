@@ -29,7 +29,7 @@ export function Projects() {
     
     return (
         <div className="flex flex-col w-full lg:w-7xl h-auto items-center gap-5 lg:gap-10 lg:mb-30 pb-20">
-            <div className="absolute flex w-full h-800 overflow-x-hidden -translate-y-400">
+            <div className="absolute flex w-full h-800 overflow-x-hidden -translate-y-400 -z-10">
                 <img
                     src={elips}
                     alt=""

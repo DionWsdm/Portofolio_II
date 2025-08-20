@@ -29,7 +29,7 @@ export function Profile() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[650px] lg:h-[820px] w-full px-10 lg:px-20 items-center overflow-hidden mb-8 lg:mb-22">
+    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[650px] lg:h-205 xl:w-6xl 2xl:w-full px-10 lg:px-20 items-center overflow-hidden mb-8 lg:mb-22">
       <img
         src={elips}
         alt=""
@@ -38,16 +38,16 @@ export function Profile() {
       <ShootingStars/>
       <StarsBg />
       <Navigation setIsFlipped={setIsFlipped}/>
-      <div className="flex flex-col gap-5 lg:flex-row w-full h-full items-center -translate-y-8 lg:-translate-y-0">
+      <div className="flex flex-col gap-5 lg:gap-10 lg:flex-row w-full h-full items-center -translate-y-8 xl:-translate-x-22 2xl:-translate-x-0 2xl:-translate-y-0">
         <div className="flex flex-col gap-3 lg:flex-row items-center lg:gap-0">
           <img
             src={ProfilePic}
             alt="something"
-            className="size-65 lg:size-120 rounded-full overflow-x-hidden object-cover"
+            className="size-65 xl:size-100 2xl:size-120 rounded-full overflow-x-hidden object-cover"
           />
         </div>
-        <div className="flex h-auto lg:h-110 w-full">
-          <div className="relative w-full lg:w-4xl perspective-[1000px] items-center mx-auto">
+        <div className="flex h-auto lg:h-110 w-full xl:w-6xl 2xl:w-full">
+          <div className="relative w-full perspective-[1000px] items-center mx-auto">
             <div
               className={`relative font-roboto font-bold w-full h-auto duration-700 transform-3d mx-auto ${
                 isFlipped ? "rotate-y-180" : ""
@@ -71,7 +71,7 @@ export function Profile() {
                 </div>
                 <div className="flex flex-col gap-3 w-[90%] h-full lg:w-3xl lg:gap-5">
                   <p className="text-2xl lg:text-5xl">Hey There!</p>
-                  <div className=" text-3xl lg:text-6xl">
+                  <div className=" text-3xl xl:text-5xl 2xl:text-6xl">
                     <span>I'm Dion Wisdom Pasaribu and i'm a </span>
                     <Scrumble />
                   </div>
@@ -109,7 +109,7 @@ export function Profile() {
               <div className="absolute flex flex-col gap-5 w-full h-auto items-center py-3 bg-neutral-500/10 backface-hidden lg:translate-x-10 rounded-2xl lg:mt-20 lg:py-10 rotate-y-180">
                 <div className="flex flex-col w-[90%] gap-3 lg:w-3xl lg:gap-5">
                   <p className="text-2xl lg:text-5xl">About Me</p>
-                  <article className="text-[14px] lg:text-[20px]">
+                  <article className="text-[14px] lg:text-[20px] pb-5">
                     I'm an undergraduate Information System student at Universitas Indonesia. I am a
                     dedicated student with a profound interest in technology,
                     programming, mathematics, and business. I have a
@@ -120,7 +120,7 @@ export function Profile() {
                     impactful manner.
                   </article>
                   <div className="relative w-full mt-7">
-                        <button className="absolute right-0 bottom-2 lg:bottom-0 transition bg-neutral-300/10 w-25 h-10 rounded-2xl hover:cursor-pointer hover:bg-neutral-300/20"
+                        <button className="absolute right-0 bottom-2 lg:bottom-0 transition bg-neutral-300/10 w-25 h-8 lg:h-10 rounded-[12px] lg:rounded-2xl hover:cursor-pointer hover:bg-neutral-300/20"
                         onClick={() => setIsFlipped(false)}>
                             Profile
                         </button>
@@ -132,5 +132,5 @@ export function Profile() {
         </div>
       </div>
     </div>
-  );
+  )
 }
