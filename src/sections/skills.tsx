@@ -24,87 +24,87 @@ export function Skills() {
     const logos: logo[] = [
         {
             src: java,
-            name: "java",
-            size: "size-12 lg:size-15",
+            name: "Java",
+            size: "size-12 md:size-15",
         }, 
         {
             src: typeScript,
             name:"TypeScript",
-            size: "size-8 lg:size-10",
+            size: "size-8 md:size-10",
         }, 
         {
             src: javaScript,
-            size: "size-8 lg:size-10",
+            size: "size-8 md:size-10",
             name: "JavaScript"
         }, 
         {
             src: python,
-            size: "size-10 lg:size-11",
+            size: "size-10 md:size-11",
             name: "Python"
         },
         {
             src: html, 
-            size: "size-10 lg:size-13",
+            size: "size-10 md:size-13",
             name: "HTML"
         },
         {
             src: css,
-            size: "size-10 lg:size-12 object-cover",
+            size: "size-10 md:size-12 object-cover",
             name: "CSS"
         },
         {
             src: tailwind,
-            size: "size-8 lg:size-10",
+            size: "size-8 md:size-10",
             name: "Tailwind CSS"
         },
         {
             src: react,
-            size: "size-10 lg:size-12",
+            size: "size-10 md:size-12",
             name: "React.js"
         },
         {
             src: express,
-            size: "size-10 lg:size-12 invert",
+            size: "size-10 md:size-12 invert",
             name: "Express.js"
         },
         {
             src: postgre,
-            size: "size-9 lg:size-11",
+            size: "size-9 md:size-11",
             name: "PostgreSQL"
         },
         {
             src: mysql,
-            size: "size-13 lg:size-15",
+            size: "size-13 md:size-15",
             name: "MySQL"
         },
         {
             src: prisma,
-            size: "size-9 lg:size-12 invert",
+            size: "size-9 md:size-12 invert",
             name: "Prisma"
         },
         {
             src: pandas,
-            size: "size-12 lg:size-13",
+            size: "size-12 md:size-13",
             name: "Pandas"
         },
         {
             src: numpy,
-            size: "size-15 lg:size-19",
+            size: "size-15 md:size-19",
             name: "Numpy"
         }
     ]
 
     return (
-        <div className="flex flex-col w-80 lg:w-7xl items-center gap-7 lg:gap-15 mb-15 lg:mb-20 lg:pb-20">
+        <div className="flex flex-col w-80 md:w-2xl xl:w-6xl 2xl:w-7xl items-center gap-7 lg:gap-15 mb-15 lg:mb-20 lg:pb-20">
             <StarsBg height={window.innerWidth < 450 ? 480 : 400} jumlah={100}/>
-            <p className="text-3xl lg:text-5xl font-bold">Skills</p>
-            <div className="grid grid-cols-4 gap-7 lg:grid-cols-10 lg:gap-10">
+            <p className="text-3xl md:text-6xl lg:text-5xl font-bold">Skills</p>
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-10 gap-7 lg:gap-10">
                 {logos.map((logo) => (
                     <div className="flex flex-col gap-3 items-center text-center">
-                        <div className="flex size-15 lg:size-20 rounded-full bg-blue-400/20 items-center">
+                        <div className="flex size-15 md:size-20 rounded-full bg-blue-400/20 items-center">
                             <img src={logo.src} alt="logo" className={`${logo.size} m-auto`}/>
                         </div>
-                        <p className="text-[16px]">{logo.name}</p>
+                        <p className="text-[16px] md:text-[18px]">{logo.name}</p>
                     </div>
                 ))}
             </div>

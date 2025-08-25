@@ -29,7 +29,7 @@ export function ShootingStars() {
   useEffect(() => {
     const background = document.getElementById("shooting-stars");
     const deltaY = window.innerWidth < 500 ? 7 : 3;
-    const delay = window.innerWidth < 500 ? 5 : 1;
+    const delay = getRandomInt(1, 10)
     if (currStar) {
       let posY = 0;
       let posX = parseInt(

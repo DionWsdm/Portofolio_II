@@ -29,7 +29,7 @@ export function Profile() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[650px] lg:h-205 xl:w-6xl 2xl:w-full px-10 lg:px-20 items-center overflow-hidden mb-8 lg:mb-22">
+    <div className="grid grid-rows-[10%_70%_15%] lg:grid-rows-[10%_80%_10%] h-[650px] md:h-260 lg:h-205 xl:w-6xl 2xl:w-full items-center overflow-hidden mb-8 md:mb-18 xl:mb-0 2xl:mb-20">
       <img
         src={elips}
         alt=""
@@ -43,10 +43,10 @@ export function Profile() {
           <img
             src={ProfilePic}
             alt="something"
-            className="size-65 xl:size-100 2xl:size-120 rounded-full overflow-x-hidden object-cover"
+            className="size-65 md:size-110 xl:size-100 2xl:size-120 rounded-full overflow-x-hidden object-cover"
           />
         </div>
-        <div className="flex h-auto lg:h-110 w-full xl:w-6xl 2xl:w-full">
+        <div className="flex h-auto lg:h-110 w-full xl:w-6xl 2xl:w-4xl">
           <div className="relative w-full perspective-[1000px] items-center mx-auto">
             <div
               className={`relative font-roboto font-bold w-full h-auto duration-700 transform-3d mx-auto ${
@@ -59,32 +59,32 @@ export function Profile() {
                   {medias.map((media) => (
                     <a
                       href={media.link}
-                      className="flex size-10 lg:size-15 rounded-full bg-white"
+                      className="flex size-10 md:size-15 rounded-full bg-white"
                     >
                       <img
                         src={media.src}
                         alt="media"
-                        className="size-7 lg:size-10 m-auto"
+                        className="size-7 md:size-10 m-auto"
                       />
                     </a>
                   ))}
                 </div>
-                <div className="flex flex-col gap-3 w-[90%] h-full lg:w-3xl lg:gap-5">
-                  <p className="text-2xl lg:text-5xl">Hey There!</p>
-                  <div className=" text-3xl xl:text-5xl 2xl:text-6xl">
+                <div className="flex flex-col gap-3 w-[90%] h-full md:h-auto lg:w-3xl lg:gap-5">
+                  <p className="text-2xl md:text-5xl">Hey There!</p>
+                  <div className=" text-3xl md:text-6xl lg:text-5xl 2xl:text-6xl">
                     <span>I'm Dion Wisdom Pasaribu and i'm a </span>
                     <Scrumble />
                   </div>
-                  <div className="relative flex flex-row w-full">
+                  <div className="relative flex flex-row w-full md:pt-5 md:pb-5 lg:pt-0 lg:pb-0 items-center">
                     <a
                       href="https://drive.google.com/uc?export=download&id=1nc9o775RhHoxHWdvUKnLsrmmciVQXe35"
                       download
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex w-40 h-10 lg:w-60 lg:h-18 bg-white rounded-[10px] text-black"
+                      className="flex w-40 h-10 md:w-60 md:h-16 lg:h-18 bg-white rounded-[10px] text-black"
                     >
                       <div className="flex flex-row m-auto gap-3 items-center">
-                        <p className="lg:text-[20px] lg:text-2xl">Download CV</p>
+                        <p className="text-[16px] md:text-3xl lg:text-2xl">Download CV</p>
                         <img
                           src={Download}
                           alt="download"
@@ -93,7 +93,7 @@ export function Profile() {
                       </div>
                     </a>
                     <button
-                      className="absolute right-0 lg:right-12 bottom-0 transition bg-neutral-300/10 hover:bg-neutral-300/20 w-25 h-10 rounded-2xl hover:cursor-pointer"
+                      className="absolute right-0 lg:right-12 transition bg-neutral-300/10 hover:bg-neutral-300/20 w-25 md:w-35 h-10 md:h-15 rounded-2xl hover:cursor-pointer md:text-2xl"
                       onClick={() => {
                         setIsFlipped(true);
                         console.log(isFlipped);
@@ -108,8 +108,8 @@ export function Profile() {
               {/* Back-side */}
               <div className="absolute flex flex-col gap-5 w-full h-auto items-center py-3 bg-neutral-500/10 backface-hidden lg:translate-x-10 rounded-2xl lg:mt-20 lg:py-10 rotate-y-180">
                 <div className="flex flex-col w-[90%] gap-3 lg:w-3xl lg:gap-5">
-                  <p className="text-2xl lg:text-5xl">About Me</p>
-                  <article className="text-[14px] lg:text-[20px] pb-5">
+                  <p className="text-2xl md:text-4xl lg:text-5xl">About Me</p>
+                  <article className="text-[14px] md:text-[26px] lg:text-[20px] pb-5">
                     I'm an undergraduate Information System student at Universitas Indonesia. I am a
                     dedicated student with a profound interest in technology,
                     programming, mathematics, and business. I have a
@@ -119,8 +119,8 @@ export function Profile() {
                     to enhance my skills and apply them in a meaningful and
                     impactful manner.
                   </article>
-                  <div className="relative w-full mt-7">
-                        <button className="absolute right-0 bottom-2 lg:bottom-0 transition bg-neutral-300/10 w-25 h-8 lg:h-10 rounded-[12px] lg:rounded-2xl hover:cursor-pointer hover:bg-neutral-300/20"
+                  <div className="relative w-full mt-7 md:mt-12">
+                        <button className="absolute right-0 bottom-2 lg:bottom-0 transition bg-neutral-300/10 w-25 md:w-35 h-8 md:h-15 lg:h-12 rounded-[12px] lg:rounded-2xl hover:cursor-pointer hover:bg-neutral-300/20 md:text-2xl"
                         onClick={() => setIsFlipped(false)}>
                             Profile
                         </button>
